@@ -8,3 +8,4 @@ VToken vTTD   -        0xd011E96c10cD0eCb82a38CEdE921906Ee5e981EA<br />
 VToken vRT    -        0x9d1F0652927E16d6d8b0AfA9F270C33Fb4869087<br />
 Virtualizer   -        0x0a90769a8B53515C5F671eD7379DF3Ed2bDE910e<br />
 VARQ          -        0x077b8FEaAD247bdf4827B4D12bb9B938397FC529<br />
+DepositClaim  -        0x3A23b1EdD60851aB69ab941B54528c385b0C1dFC<br />
