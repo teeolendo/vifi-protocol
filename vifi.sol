@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.25;
 
 import "@openzeppelin/contracts@4.9.3/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts@4.9.3/access/Ownable.sol";
 
 contract MockUSDC is ERC20 {
     constructor() ERC20("Mock USDC", "mUSDC") {
-        _mint(msg.sender, 1000000 * 10**18); // Mint 1 million tokens for testing
+        _mint(msg.sender, 1000000000 * 10**18); // Mint 1 million tokens for testing
     }
 }
 
@@ -72,7 +72,7 @@ contract VARQ is Ownable {
     }
 
     function setDAO(address _dao) external onlyOwner {
-        require(dao == address(0), "DAO already set");
+        require(_dao != address(0), "Invalid DAO address");
         dao = _dao;
     }
 
@@ -80,17 +80,25 @@ contract VARQ is Ownable {
         CBrate = _CBrate;
     }
 
-    function convertVUSDToTokens(uint256 vUSDAmount) public {
+    function convertVUSDToTokens(uint256 vUSDAmount, address destination) public {
         vUSD.burn(msg.sender, vUSDAmount);
-        vRT.mint(msg.sender, vUSDAmount);
-        vTTD.mint(msg.sender, vUSDAmount * CBrate);
+        vRT.mint(destination, vUSDAmount);
+        vTTD.mint(destination, (vUSDAmount * CBrate) / 100); // Adjusted for 2 decimal places
     }
 
-    function convertTokensToVUSD(uint256 vTTDAmount, uint256 vRTAmount) public {
-        require(vTTDAmount / CBrate == vRTAmount, "Amounts mismatch");
+    function convertTokensToVUSD(uint256 vRTAmount, address destination) public {
+        uint256 burnCBrate = getBurnCBrate();
+        uint256 vTTDAmount = (vRTAmount * burnCBrate) / 100; // Adjusted for 2 decimal places
+
+        require(( vTTDAmount * 100 ) / burnCBrate == vRTAmount, "Amounts mismatch");
+
         vTTD.burn(msg.sender, vTTDAmount);
         vRT.burn(msg.sender, vRTAmount);
-        vUSD.mint(msg.sender, vRTAmount);
+        vUSD.mint(destination, vRTAmount);
+    }
+
+    function getBurnCBrate() public view returns (uint256) {
+        return (vTTD.totalSupply() * 100) / vRT.totalSupply(); // Adjusted for 2 decimal places
     }
 }
 
@@ -123,5 +131,23 @@ contract ViFi_DAO is Ownable {
 
     function setCBrate(uint256 _CBrate) public onlyOwner {
         varq.setCBrate(_CBrate);
+    }
+
+    function setVarq(address _varq) public onlyOwner {
+        require(_varq != address(0), "Invalid VARQ address");
+        varq = VARQ(_varq);
+        // Ensure the new varq is properly initialized and set as a controller
+        varq.initialize(address(vUSD), address(vTTD), address(vRT));
+        varq.setDAO(address(this));
+        vUSD.setController(address(varq), true);
+        vTTD.setController(address(varq), true);
+        vRT.setController(address(varq), true);
+    }
+
+    function setVirtualizer(address _virtualizer) public onlyOwner {
+        require(_virtualizer != address(0), "Invalid Virtualizer address");
+        virtualizer = Virtualizer(_virtualizer);
+        // Ensure the new virtualizer is set as a controller
+        vUSD.setController(address(virtualizer), true);
     }
 }
