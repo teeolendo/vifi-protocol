@@ -1,14 +1,14 @@
 # vifi_sol
 Smart Contract Code for the Virtual Finance Platform
 
-MUSD          -        0x72bEf7bd0C1C9E99ca1891C3EA7B9EC065b799A5<br />
-VIFI_DAO      -        0x7C3Ba83b5CFdbCbB9f002E124595DB93bC560518<br />
-VToken vUSD   -        0xAc035d4f1908B6A773231a4E5004175dbad5f0E5<br />
-VToken vTTD   -        0x5e3839e49711463500c2f110Be29681Bb2a20899<br />
-VToken vRT    -        0x4187c59A354a6Bb4f53da7Ca7B69Ad36deFbf5C6<br />
-Virtualizer   -        0x51af36d0b3687FA36887B7910C56eeCe255066f6<br />
-VARQ          -        0x4745fFF4EfcF703E9Db9308211Dc30737D4e7921<br />
-DepositClaim  -        0x52579526e442a33bcCbf5A1c73594b2d3d32bcaF<br />
+MUSD          -        0xB152BB6e264E90A23e86617B1763FB4e734F50c5<br />
+VIFI_DAO      -        0x5cB10F2d9e6838D03A6B66324fED3D569AC5F871<br />
+VToken vUSD   -        0xFcde9E29C280c3efCC0297c2CCE67B6810f15B67<br />
+VToken vTTD   -        0x9eCA688094720Ab7fd5d74530b07ECA182590221<br />
+VToken vRT    -        0x9874fe5f4736C755E4b9A3FF77977a23A6f93C7f<br />
+Virtualizer   -        0x4659C70696F281dFB216fFD297013D5613E4b792<br />
+VARQ          -        0x73F19409B2bC99cC3933D742e2A2f2449a6d3266<br />
+DepositClaim  -        0xDFB4e8Fa9F8370e369A11ceA8be1a05A4D66eB2B<br />
 
 #Depreciated
 
