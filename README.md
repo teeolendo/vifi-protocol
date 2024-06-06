@@ -9,6 +9,7 @@ VToken vRT    -        0x9874fe5f4736C755E4b9A3FF77977a23A6f93C7f<br />
 Virtualizer   -        0x4659C70696F281dFB216fFD297013D5613E4b792<br />
 VARQ          -        0x73F19409B2bC99cC3933D742e2A2f2449a6d3266<br />
 DepositClaim  -        0xDFB4e8Fa9F8370e369A11ceA8be1a05A4D66eB2B<br />
+VEX           -        0x64e282DF50C02e77049C6121C181d2E3415a757a<br />
 
 #Depreciated
 
