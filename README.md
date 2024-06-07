@@ -7,7 +7,7 @@ VToken vUSD   -        0xFcde9E29C280c3efCC0297c2CCE67B6810f15B67<br />
 VToken vTTD   -        0x9eCA688094720Ab7fd5d74530b07ECA182590221<br />
 VToken vRT    -        0x9874fe5f4736C755E4b9A3FF77977a23A6f93C7f<br />
 Virtualizer   -        0x4659C70696F281dFB216fFD297013D5613E4b792<br />
-VARQ          -        0xbb9F8B45045dB8607FAA781ae9D38955Dc3446Bb // newly upgraded and removed error<br /> 
+VARQ          -        0x9E3f6Ef1cc1AD22425750b4921804363E34d1033 // newly upgraded and removed error<br /> 
 DepositClaim  -        0xDFB4e8Fa9F8370e369A11ceA8be1a05A4D66eB2B<br />
 VEX           -        0xD3AD0258d0929d30F40b5f3516FAE2891B4C7D79<br />
 
