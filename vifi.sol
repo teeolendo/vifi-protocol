@@ -90,7 +90,9 @@ contract VARQ is Ownable {
         uint256 burnCBrate = getBurnCBrate();
         uint256 vTTDAmount = (vRTAmount * burnCBrate) / 100; // Adjusted for 2 decimal places
 
-        require(( vTTDAmount * 100 ) / burnCBrate == vRTAmount, "Amounts mismatch");
+        require( vTTDAmount > vTTD.balanceOf(msg.sender), "Not Enough, vTTD");
+
+        //require(( vTTDAmount * 100 ) / burnCBrate == vRTAmount, "Amounts mismatch");
 
         vTTD.burn(msg.sender, vTTDAmount);
         vRT.burn(msg.sender, vRTAmount);
