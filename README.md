@@ -1,6 +1,20 @@
 # vifi_sol
 Smart Contract Code for the Virtual Finance Platform
 
+#Base - Sepolia
+
+MUSD          -        0x13D07539925924304cD8104E82C6BB7256487F23<br />
+VIFI_DAO      -        0xC7c7a051b4523c26355Cbd2CdBAf92E2fE80E661<br />
+VToken vUSD   -        0x4A3Da8048e721Fb9D8363DCef2527e3c89d2A351<br />
+VToken vTTD   -        0xbb92DED6b4Ef829f68F22Ec76E1B2154F5F8C6Ee<br />
+VToken vRT    -        0x9ce1ADd19cc36400c8678F202EBCB22C296bD1F5<br />
+Virtualizer   -        0xc63E8A090C866D0e19553c73be02175242d52e9e<br />
+VARQ          -        0xa43835EAB54474e76331f8F59E6CE2910964893C // newly upgraded and removed error<br /> 
+DepositClaim  -        0x64318F8EA6cEA2cfAf9E7bB5521a8FCe8Da6fC7D<br />
+VEX           -        0x6B51b94177C3fcaDF71aB7f94BFc8822C1149fbD<br />
+
+#Sepolia
+
 MUSD          -        0xB152BB6e264E90A23e86617B1763FB4e734F50c5<br />
 VIFI_DAO      -        0x5cB10F2d9e6838D03A6B66324fED3D569AC5F871<br />
 VToken vUSD   -        0xFcde9E29C280c3efCC0297c2CCE67B6810f15B67<br />
