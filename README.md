@@ -11,7 +11,7 @@ VToken vRT    -        0x9ce1ADd19cc36400c8678F202EBCB22C296bD1F5<br />
 Virtualizer   -        0xc63E8A090C866D0e19553c73be02175242d52e9e<br />
 VARQ          -        0xa43835EAB54474e76331f8F59E6CE2910964893C // newly upgraded and removed error<br /> 
 DepositClaim  -        0x64318F8EA6cEA2cfAf9E7bB5521a8FCe8Da6fC7D<br />
-VEX           -        0x6B51b94177C3fcaDF71aB7f94BFc8822C1149fbD<br />
+VEX           -        0x9f4E432b5D692c8Bb9908279992ABE7Fb5615B70<br />
 SWAP_ROUTER_02-        0x94cC0AaC535CCDB3C01d6787D6413C739ae12bc4<br />
 
 #Sepolia
