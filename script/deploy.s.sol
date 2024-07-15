@@ -16,10 +16,7 @@ contract DeployViFi is Script {
         vm.startBroadcast(deployerPrivateKey);
 
         MockUSDC mUSDC = new MockUSDC();
-        ViFiDAO dao = new ViFiDAO(address(mUSDC), chainlinkrouter, donid);
-
-        console.log("MockUSDC contract address:", address(mUSDC));
-        console.log("ViFiDAO contract address:", address(dao));
+        new ViFiDAO(address(mUSDC), chainlinkrouter, donid);
 
         vm.stopBroadcast();
     }
